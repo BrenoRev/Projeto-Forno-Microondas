@@ -9,12 +9,12 @@ module frequency_divide_by_100_tb;
     frequency_divide_by_100 uut(in_clock_tb, out_clock_tb);
 
     initial begin
-        $dumpfile("frequency_divide_by_100.vcd");
+        $dumpfile("../wave_forms/frequency_divide_by_100.vcd");
         $dumpvars(0, frequency_divide_by_100_tb);
 
         in_clock_tb = 0;
 
-        repeat(1000)
+        repeat(2000)
             #5 in_clock_tb = ~in_clock_tb;
         
     end

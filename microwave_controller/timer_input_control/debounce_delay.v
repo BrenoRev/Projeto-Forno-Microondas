@@ -13,8 +13,8 @@ module debounce_delay(
         edge_out <= 1'b0;
     end
 
-    always @(posedge clock, posedge clear) begin
-        if (clear == 1'b1) begin
+    always @(posedge clock) begin
+        if (clear == 1'b0) begin
             count <= 3'd0;
             edge_out <= 1'b0;
         end else begin
